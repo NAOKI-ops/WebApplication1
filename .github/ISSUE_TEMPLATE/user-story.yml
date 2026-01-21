@@ -1,0 +1,47 @@
+name: User Story
+description: Azure DevOps User Story compatible template
+title: "[US] "
+labels: ["type:user-story"]
+body:
+  - type: input
+    id: background
+    attributes:
+      label: Background (Why)
+      description: なぜこの変更が必要か
+    validations:
+      required: true
+
+  - type: input
+    id: actor
+    attributes:
+      label: Actor (Who)
+      description: 誰が使うか
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal (What / How)
+      description: ユーザーが達成したいこと・システムの振る舞い
+    validations:
+      required: true
+
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Use Case / Basic Flow
+      description: 基本フロー
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: 受入条件（チェック可能に）
+      placeholder: |
+        - [ ] 条件1
+        - [ ] 条件2
+    validations:
+      required: true
