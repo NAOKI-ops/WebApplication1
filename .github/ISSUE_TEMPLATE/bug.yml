@@ -1,0 +1,69 @@
+name: Bug
+description: Report a reproducible bug with environment and reproduction steps
+title: "[BUG] "
+labels: ["type:bug"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Enter a short title
+      description: Brief summary of the bug (required)
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro_steps
+    attributes:
+      label: Repro Steps
+      description: |
+        - Background / Context
+        - Expected Behavior
+        - Actual Behavior
+        - Steps to reproduce (numbered)
+        - Possible root cause & attempted fixes
+    validations:
+      required: true
+
+  - type: textarea
+    id: system_info
+    attributes:
+      label: System Info
+      description: Environment details (OS, browser, app version, server, DB, etc.)
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Attachments
+      description: Attach screenshots, logs, or recordings that demonstrate the issue.
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Describe the impact (blocker / major / minor) and business effect.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Blocker
+        - High
+        - Medium
+        - Low
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes / Remarks
+      description: Any other info (workarounds, links to related work, PRs, or commits).
+    validations:
+      required: false
